@@ -430,7 +430,7 @@ img {
 header
 -----------*/
 .header {
-  width: 100%;
+  max-width: 1020px;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -441,13 +441,15 @@ header
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 60px;
-  padding-right: 39px;
+  padding-inline: 30px;
+  margin: 0 auto;
 }
 
 .header__logo {
   font-size: 2rem;
   font-weight: 300;
+  font-style: normal;
+  line-height: 1.65;
   color: #505050;
 }
 
@@ -455,27 +457,35 @@ header
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 24px;
 }
 .header__nav li a {
-  padding: 21px;
+  font-size: 2rem;
+  padding-inline: 9px;
   font-weight: 300;
+  font-style: normal;
   color: #505050;
+  margin: 0;
 }
 
 /*----------
 fv
 -----------*/
-.fv {
+#fv {
   position: relative;
+  width: 100%;
 }
 
 .fv__contents {
+  width: 100%;
   position: absolute;
-  top: 50px;
-  left: 200px;
-}
-
-.fv__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 50px;
   font-size: 40px;
   font-weight: 300;
 }

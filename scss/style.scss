@@ -58,29 +58,36 @@ img {
 header
 -----------*/
 .header{
-    width: 100%;
+    max-width: 1020px;
     height:50px ;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 60px;
-    padding-right: 39px;
+    padding-inline: 30px;
+    margin: 0 auto;
     
 }
 .header__logo{
     font-size: 2rem;
     font-weight: 300; 
+    font-style: normal;
+    line-height: calc(33/20);
     color: #505050;   
 }
 
 .header__nav{
     display: flex;
+    gap: 24px; 
      
     li{
        a{
-        padding: 21px;
+        font-size: 2rem;
+        padding-inline: 9px;
         font-weight: 300; 
-        color: #505050;   
+        font-style: normal;
+        color: #505050; 
+        margin: 0; 
+        
        } 
     }
 }
@@ -89,19 +96,21 @@ header
 /*----------
 fv
 -----------*/
-.fv{
+#fv{
     position: relative;
+    width: 100%;
 }
 
 .fv__contents{
+    width: 100%;
     position: absolute;
-    top: 50px;
-    left: 200px;
-}
-.fv__title{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
     font-size: 40px;
     font-weight: 300;
 }
+
 /*----------
 header
 -----------*/
