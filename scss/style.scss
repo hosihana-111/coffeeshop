@@ -18,6 +18,7 @@ body {
   font-weight: 400;
   line-height:  calc(25 / 15);  
   color: #505050;
+  
 }
 
 
@@ -38,6 +39,7 @@ body {
 
 img {
   width: 100%;
+
 }
 
 #container {
@@ -48,6 +50,7 @@ img {
 .inner {
   max-width: 1020px;
   margin: 0 auto;
+  
 }
 .sub__title{
     display: flex;
@@ -56,12 +59,13 @@ img {
     font-size: 3rem;
     font-weight: 300;
     
+    
     &::after {
     content: "";
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -15px; 
+    bottom: -10px; 
     width: 50px;
     height: 2px; 
     background-color: #505050;
@@ -78,6 +82,10 @@ header
     align-items: center;
     padding-inline: 30px;
     margin: 0 auto;
+    @include sp{
+        padding-inline: 20px;
+    }
+    
     
 }
 .header__logo{
@@ -86,6 +94,7 @@ header
     font-style: normal;
     line-height: calc(33/20);
     color: #505050;   
+    
 }
 
 .header__nav{
@@ -118,17 +127,28 @@ fv
     position: absolute;
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 40px;
     font-size: 40px;
     font-weight: 300;
+    
+    @include sp{
+            font-size: 35px;
+            text-align: center;
+            padding-top: 40px;
+            line-height: 1.3;
+    }
 }
 
 /*----------
 menu
 -----------*/
 #menu{
-    padding-top: 50px;
+    padding-top: 48px;
     padding-bottom: 39px;
+    @include sp{
+    padding-top: 40px;
+    padding-bottom: 44px;
+    }
 }
 .menu__container{
     padding-inline: 30px;
@@ -137,23 +157,30 @@ menu
      display: flex;
     justify-content: space-between;    
     width: 100%;
-    margin-top: 45px;
+    margin-top: 40px;
     gap: 3.125%; // 間隔を%指定でレスポンシブに    
     @include sp{
         flex-direction: column; 
-        gap: 24px;
+        gap: 20px;
+        
     }
 }
 .menu_card{
     width: 31.25%; // 300px ÷ 960px
-    
+    text-align: center;
 }
+.menu-img{
+    width: 100%;
+    height: auto;
+   
+}
+
 .card-body{
-    padding-top: 30px;
-    padding-inline: 30px;
+    padding-top: 27px;
+    
     @include sp{
         padding-top: 20px;
-        padding-inline: 20px;
+       
     }
 }
 .menu__title{
@@ -167,19 +194,23 @@ menu
 .text{
     font-size:1.5rem;
     letter-spacing: calc(15/25);
+    line-height: calc(25/15);
     font-weight: 400;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 9px;
+    margin-top: 5px;
+     @include sp{
+        margin-top: 4px;
+    }
 }
 
 /*----------
 about
 -----------*/
 #about{
-     padding-top: 40px;
-     padding-bottom:48px ;
+     padding-top: 34px;
+     padding-bottom:49px ;
     background-color:rgba(112, 112, 112,0.051) ;
 }
 .about__container{
@@ -187,19 +218,20 @@ about
 }    
 
 .about__items{
-    margin-top: 30.5px;
+    margin-top: 40px;
    display: flex;
    justify-content: space-between;  
    align-items: center;    
     width: 100%;   
-    gap: 4.0625%; 
+    gap: 3.125%; 
     @include sp{
         flex-direction: column-reverse; 
-        gap: 28px; 
+        gap: 20px; 
     }
 }
 .about__contents{
-    width: 51.042%;
+    width: 50%;
+    
     @include sp{
         width: 100%;
         
@@ -208,23 +240,28 @@ about
 .about__contents-title{
     font-size: 2.2rem;
     letter-spacing: calc(22/33);
+    line-height:calc(33/22) ;
     font-weight: 500;
-   
+   @include sp{
+    margin-top: 10px;
+   }
 }
 .about__contents-text{
     font-size: 1.8rem;
-    letter-spacing: calc(18/33);
+    letter-spacing: calc(16/33);
     font-weight: 400;
-    margin-top: 21px;
+    margin-top: 23px;
+    line-height:calc(33/18) ;
 }
 .about__img{
      width: 46.875%;// 450px ÷ 960px
+     object-fit: cover;
      @include sp{
         width: 100%;
     }
      img{
         width: 100%;
-        height: auto;
+        object-fit: cover;
         display: block;
      }
 }
@@ -237,21 +274,27 @@ about
   font-size: 2.5rem;
   font-weight: 200;
   width: 250px;
-  padding: 13px auto;
-  margin-top: 22px;
+  height: 55px;  
+  padding: 8px 0;
+  margin-top: 23px;
   cursor: pointer;
   transition: all 0.3s;
   text-align: center;
-  
+   
   &:hover{
     color: #505050;
     background-color: #fff;
     border: 1px solid #505050;
     cursor:pointer;
+    a{
+        
+    }
   }
   @include sp{
     display: block;
-    margin: 33px auto 0 auto;
+    margin: 23px auto 0 auto;
+    width: 315px;
+    
   }
 }
 

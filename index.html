@@ -42,21 +42,34 @@
                         <h2 class="sub__title">MENU</h2>
                         <div class="menu__items">
                             <div class="menu__card">
-                                <img src="./images/menu01.jpg" alt="カフェラテカフェラテ" class="menu-img">
+                                <picture>
+                                    <source srcset="./images/menu01.jpg"media="(min-width: 768px)" type="image/jpg">
+                                    <source srcset="./images/menu01-sp.jpg" media="(max-width: 767px)" type="image/jpg">
+                                   <img src="./images/menu01.jpg" alt="カフェラテカフェラテ" class="menu-img"> 
+                                </picture>
+                                
                                 <div class="card-body">
                                     <p class="menu__title">カフェラテ（ICE・HOT）</p>
                                     <p class="text">お好みのブレンドコーヒーと<br>厳選したミルクのカフェラテ</p>
                                 </div>
                             </div>                                
                             <div class="menu__card">
-                                <img src="./images/menu02.jpg" alt="コーヒー" class="menu-img">
+                                <picture>
+                                    <source srcset="./images/menu02.jpg"media="(min-width: 768px)" type="image/jpg">
+                                    <source srcset="./images/menu02-sp.jpg" media="(max-width: 767px)" type="image/jpg">
+                                    <img src="./images/menu02.jpg" alt="コーヒー" class="menu-img">
+                                </picture>                                
                                 <div class="card-body">
                                    <p class="menu__title">コーヒー（ICE・HOT）</p>
                                    <p class="text">お好みの味をブレンドした<br>コーヒー本来の味を味わえる</p>
                                 </div>                                
                             </div>
                             <div class="menu__card">
-                                <img src="./images/menu03.jpg" alt="カップケーキ" class="menu-img">
+                                <picture>
+                                    <source srcset="./images/menu03.jpg"media="(min-width: 768px)" type="image/jpg">
+                                    <source srcset="./images/menu03-sp.jpg" media="(max-width: 767px)" type="image/jpg">
+                                    <img src="./images/menu03.jpg" alt="カップケーキ" class="menu-img">
+                                </picture>                                 
                                 <div class="card-body">
                                     <p class="menu__title">カップケーキ（各種）</p>
                                     <p class="text">コーヒーのお供に<br>日替わり常時５種類</p>
@@ -73,10 +86,18 @@
                             <div class="about__contents">
                                 <p class="about__contents-title">老舗の味をテイクアウトで楽しめる<br class="pc">新しいカフェスタイル</p>
                                 <p class="about__contents-text">知る人ぞ知る東京銀座の老舗カフェが提供する、移動販売のテイクアウトコーヒーです。<br>「いつもの」がお家でオフィスでお気軽に楽しめます。</p>
-                                <a href="#" class="more__btn">MORE</a>
+                                <div class="more__btn">
+                                    <a href="#" >MORE</a>
+                                </div>
+                                
                             </div>
                             <div class="about__img">
-                                <img src="./images/about.jpg" alt="移動販売の車" >
+                                <picture>
+                                    <source srcset="./images/about.jpg"media="(min-width: 768px)" type="image/jpg">
+                                    <source srcset="./images/about-sp.jpg" media="(max-width: 767px)" type="image/jpg">
+                                    <img src="./images/about.jpg" alt="移動販売の車" >
+                                </picture> 
+                                
                             </div>
                         </div>
                     </div>
