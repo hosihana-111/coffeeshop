@@ -1,5 +1,5 @@
-@use './_reset';
-@use './_mediaQuery' as *;
+@use './reset';
+@use './mediaQuery' as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lusitana:wght@400;700&family=Noto+Sans+JP:wght@100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&family=Zen+Maru+Gothic&family=Zen+Old+Mincho&display=swap');
 
@@ -17,7 +17,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   line-height:  calc(25 / 15);  
-  
+  color: #505050;
 }
 
 
@@ -25,18 +25,14 @@ body {
 
 // 画面幅が 767px以下（PC） のときだけ非表示
 .pc {
-  display: block;
-
-  @include sp {
-    display: none;
+  @include sp{
+    display: none !important;
   }
 }
 // 画面幅が 768px以上（PC） のときだけ非表示
 .sp {
-  display: block;
-
-  @include pc {
-    display: none;
+   @include pc{
+    display: none !important;
   }
 }
 
@@ -53,7 +49,24 @@ img {
   max-width: 1020px;
   margin: 0 auto;
 }
-
+.sub__title{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 300;
+    
+    &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px; 
+    width: 50px;
+    height: 2px; 
+    background-color: #505050;
+  }
+}
 /*----------
 header
 -----------*/
@@ -84,8 +97,7 @@ header
         font-size: 2rem;
         padding-inline: 9px;
         font-weight: 300; 
-        font-style: normal;
-        color: #505050; 
+        font-style: normal;         
         margin: 0; 
         
        } 
@@ -112,9 +124,155 @@ fv
 }
 
 /*----------
-header
+menu
 -----------*/
+#menu{
+    padding-top: 50px;
+    padding-bottom: 39px;
+}
+.menu__container{
+    padding-inline: 30px;
+}
+.menu__items{
+     display: flex;
+    justify-content: space-between;    
+    width: 100%;
+    margin-top: 45px;
+    gap: 3.125%; // 間隔を%指定でレスポンシブに    
+    @include sp{
+        flex-direction: column; 
+        gap: 24px;
+    }
+}
+.menu_card{
+    width: 31.25%; // 300px ÷ 960px
+    
+}
+.card-body{
+    padding-top: 30px;
+    padding-inline: 30px;
+    @include sp{
+        padding-top: 20px;
+        padding-inline: 20px;
+    }
+}
+.menu__title{
+    font-size: 2rem;
+    letter-spacing: calc(25/20);
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    font-size:1.5rem;
+    letter-spacing: calc(15/25);
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9px;
+}
 
 /*----------
-header
+about
 -----------*/
+#about{
+     padding-top: 40px;
+     padding-bottom:48px ;
+    background-color:rgba(112, 112, 112,0.051) ;
+}
+.about__container{
+   padding-inline: 30px;
+}    
+
+.about__items{
+    margin-top: 30.5px;
+   display: flex;
+   justify-content: space-between;  
+   align-items: center;    
+    width: 100%;
+    margin-top: 40px;
+    gap: 2.083%; 
+    @include sp{
+        flex-direction: column-reverse; 
+        gap: 28px; 
+    }
+}
+.about__contents{
+    width: 51.042%;
+    @include sp{
+        width: 100%;
+        
+    }
+}
+.about__contents-title{
+    font-size: 2.2rem;
+    letter-spacing: calc(22/33);
+    font-weight: 500;
+   
+}
+.about__contents-text{
+    font-size: 1.8rem;
+    letter-spacing: calc(18/33);
+    font-weight: 400;
+    margin-top: 21px;
+}
+.about__img{
+     width: 46.875%;// 450px ÷ 960px
+     @include sp{
+        width: 100%;
+    }
+     img{
+        width: 100%;
+        height: auto;
+        display: block;
+     }
+}
+
+.btn{
+    margin-top: 22px;
+}
+.more__btn {
+ display: inline-block;
+  color: #fff;
+  background-color: #505050;
+  font-size: 2.5rem;
+  font-weight: 200;
+  width: 250px;
+  padding: 13px auto;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  
+  &:hover{
+    color: #505050;
+    background-color: #fff;
+    border: 1px solid #505050;
+    cursor:pointer;
+  }
+  @include sp{
+    display: block;
+    margin: 33px auto 0 auto;
+  }
+}
+
+/*----------
+footer
+-----------*/
+footer{
+   color: #fff;
+  background-color: #505050;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 29px;
+}
+small{
+    font-size: 2rem;
+    font-weight: 200;
+    letter-spacing: calc(20/33);
+    @include sp{
+        font-size: 1.7rem;
+        letter-spacing: calc(17/33);
+    }
+}
