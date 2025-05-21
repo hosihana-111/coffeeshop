@@ -193,7 +193,7 @@ about
    align-items: center;    
     width: 100%;
     margin-top: 40px;
-    gap: 2.083%; 
+    gap: 4.0625%; 
     @include sp{
         flex-direction: column-reverse; 
         gap: 28px; 
@@ -230,9 +230,7 @@ about
      }
 }
 
-.btn{
-    margin-top: 22px;
-}
+
 .more__btn {
  display: inline-block;
   color: #fff;
@@ -241,6 +239,7 @@ about
   font-weight: 200;
   width: 250px;
   padding: 13px auto;
+  margin-top: 22px;
   cursor: pointer;
   transition: all 0.3s;
   text-align: center;
