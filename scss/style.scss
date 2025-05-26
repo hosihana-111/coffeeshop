@@ -365,7 +365,9 @@ display: none;
     width: 315px;
     
   }
-  
+  @media screen and (max-width:375px){
+    width: 250px;
+  }
 }
 
 /*----------
