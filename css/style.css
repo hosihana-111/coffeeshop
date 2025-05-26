@@ -566,17 +566,22 @@ fv
     line-height: 1.2;
   }
 }
+@media screen and (max-width: 375px) {
+  .fv__contents {
+    font-size: 30px;
+  }
+}
 
 /*----------
 menu
 -----------*/
 #menu {
-  padding-top: 52px;
+  padding-top: 48px;
   padding-bottom: 39px;
 }
 @media only screen and (max-width: 767px) {
   #menu {
-    padding-top: 40px;
+    padding-top: 41px;
     padding-bottom: 44px;
   }
 }
@@ -602,7 +607,7 @@ menu
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 20px;
+    gap: 23px;
   }
 }
 
@@ -618,7 +623,7 @@ menu
 }
 @media only screen and (max-width: 767px) {
   .card-body {
-    padding-top: 20px;
+    padding-top: 17px;
   }
 }
 
@@ -640,12 +645,7 @@ menu
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 5px;
-}
-@media only screen and (max-width: 767px) {
-  .text {
-    margin-top: 4px;
-  }
+  margin-top: 4px;
 }
 
 /*----------
@@ -653,12 +653,13 @@ about
 -----------*/
 #about {
   padding-top: 34px;
-  padding-bottom: 29px;
+  padding-bottom: 50px;
   background-color: rgba(0, 0, 0, 0.051);
 }
 @media only screen and (max-width: 767px) {
   #about {
-    padding-bottom: 50px;
+    padding-top: 38px;
+    padding-bottom: 51px;
   }
 }
 
@@ -667,7 +668,7 @@ about
 }
 
 .about__items {
-  margin-top: 50px;
+  margin-top: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -689,10 +690,12 @@ about
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  margin-top: 18px;
 }
 @media only screen and (max-width: 767px) {
   .about__contents {
     width: 100%;
+    margin-top: 10px;
   }
 }
 
@@ -701,17 +704,17 @@ about
   line-height: 1.5;
   font-weight: 400;
 }
-@media only screen and (max-width: 767px) {
-  .about__contents-title {
-    margin-top: 10px;
-  }
-}
 
 .about__contents-text {
   font-size: 1.8rem;
   font-weight: 300;
   margin-top: 23px;
   line-height: 1.8333333333;
+}
+@media only screen and (max-width: 767px) {
+  .about__contents-text {
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -757,7 +760,7 @@ about
   font-weight: 200;
   width: 250px;
   height: 55px;
-  margin-top: 23px;
+  margin-top: 21px;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -791,7 +794,7 @@ about
 @media only screen and (max-width: 767px) {
   .more__btn {
     display: block;
-    margin: 23px auto 0 auto;
+    margin: 22px auto 0 auto;
     width: 315px;
   }
 }

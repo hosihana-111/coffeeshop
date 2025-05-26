@@ -182,7 +182,10 @@ fv
             padding-top: 30px;
             top: 68px;
            line-height: calc(42 / 35)
-    }}
+    }
+     @media screen and (max-width:375px){
+      font-size: 30px;
+  }}
    
 
 
@@ -192,10 +195,10 @@ fv
 menu
 -----------*/
 #menu{
-    padding-top: 52px;
+    padding-top: 48px;
     padding-bottom: 39px;
     @include sp{
-    padding-top: 40px;
+    padding-top: 41px;
     padding-bottom: 44px;
     }
 }
@@ -210,7 +213,7 @@ menu
     gap: 3.125%; // 間隔を%指定でレスポンシブに    
     @include sp{
         flex-direction: column; 
-        gap: 20px;
+        gap: 23px;
         
     }
 }
@@ -227,7 +230,7 @@ menu
     padding-top: 27px;
     text-align: center;
     @include sp{
-        padding-top: 20px;
+        padding-top: 17px;
        
     }
 }
@@ -243,10 +246,8 @@ menu
     font-weight: 300;    
     justify-content: center;
     align-items: center;
-    margin-top: 5px;
-     @include sp{
-        margin-top: 4px;
-    }
+    margin-top: 4px;
+     
 }
 
 /*----------
@@ -254,10 +255,11 @@ about
 -----------*/
 #about{
      padding-top: 34px;
-     padding-bottom:29px ;
+     padding-bottom:50px ;
     background-color:rgba(0, 0, 0, 0.051);
     @include sp{
-      padding-bottom: 50px;
+      padding-top: 38px;
+      padding-bottom: 51px;
     }
 }
 .about__container{
@@ -265,7 +267,7 @@ about
 }    
 
 .about__items{
-    margin-top: 50px;
+    margin-top: 32px;
    display: flex;   
     width: 100%;   
     gap: 3.125%; 
@@ -277,19 +279,17 @@ about
 }
 .about__contents{
     flex-grow: 1;
-    
+    margin-top: 18px;
     @include sp{
         width: 100%;
-        
+       margin-top: 10px;
     }
 }
 .about__contents-title{
     font-size: 2.2rem;    
     line-height:calc(33/22) ;
     font-weight: 400;
-   @include sp{
-    margin-top: 10px;
-   }
+   
 }
 .about__contents-text{
     font-size: 1.8rem;
@@ -297,7 +297,9 @@ about
     font-weight: 300;
     margin-top: 23px;
     line-height:calc(33/18) ;
-    
+   @include sp{
+    margin-top: 20px;
+   }
 }
 .br-none{
   @media screen and (max-width:800px){
@@ -330,7 +332,7 @@ display: none;
   font-weight: 200;
   width: 250px;
   height: 55px;   
-  margin-top: 23px;
+  margin-top: 21px;
   cursor: pointer;
   transition: all 0.3s;
     text-align: center;
@@ -359,7 +361,7 @@ display: none;
    }
   @include sp{
     display: block;
-    margin: 23px auto 0 auto;
+    margin: 22px auto 0 auto;
     width: 315px;
     
   }
