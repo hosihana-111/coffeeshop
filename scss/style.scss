@@ -88,7 +88,7 @@ header
     padding-right: 30px;
     margin: 0 auto;
     @include sp{
-        padding-inline: 20px;
+        padding-left: 11px;
     }   
     
 }
@@ -349,12 +349,13 @@ display: none;
 
 .more__btn {
 
-  width: 250px;
+  max-width: 250px;
   height: 55px;   
   margin-top: 21px;
   cursor: pointer; 
     
  @include sp{
+   
    max-width: 315px;  
   margin-inline: auto;       
   }
