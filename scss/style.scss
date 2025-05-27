@@ -41,15 +41,7 @@ img {
   width: 100%;
   height: auto;
 }
-picture {
-  display: block;
-  img {
-  display: block;
-  width: 100%;
-  height: auto;
- 
-}
-}
+
 
 
 
@@ -92,7 +84,8 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 30px;
+    padding-left: 21px;
+    padding-right: 30px;
     margin: 0 auto;
     @include sp{
         padding-inline: 20px;
@@ -108,6 +101,14 @@ header
     line-height: calc(33/20);
     color: #505050; 
     position: relative; 
+     a{
+      display: flex;
+     text-align: center;
+     align-items: center;
+      height: 50px;
+      padding: 9px;
+     } 
+    
     &::after {
          background: #505050;
         content: '';
@@ -115,7 +116,7 @@ header
         height: 1px;
         position: absolute;
         left: 0;
-        bottom: -1px;
+        bottom: 9px;
         transform-origin: left top;
         transform: scaleX(0);
         transition: transform 0.3s;
@@ -123,6 +124,7 @@ header
     &:hover::after {
         transform: scaleX(1); 
         }
+        
   
     
 }
@@ -133,19 +135,19 @@ header
 
   li {
     
-    text-align: center;
-    align-items: center;
     a {
       color: #505050;
       position: relative;
-      display: inline-block;
+      display: flex;
+     text-align: center;
+     align-items: center;
+      height: 50px;
       font-size: 2rem;
       padding: 15px 9px;
       font-weight: 300;      
-      
+      transition:0.3s;
   &:hover {
-   
-    opacity: 0.7;
+       opacity: 0.7;
 }
 }
 
@@ -162,11 +164,11 @@ fv
 .fv__contents{
   
    position: absolute;
-   top: 50px;
+   top: 71px;
    left: 50%;
    transform: translate(-50%, -50%);
    margin: 0;
-   padding-top: 50px;
+  
     font-size: 4rem;
     font-weight: 300;
     display: inline-block;
@@ -188,7 +190,15 @@ fv
   }}
    
 
-
+.fv__img{
+  display: block;
+  img {
+  display: block;
+  width: 100%;
+  height: auto;
+ 
+}
+}
 
 
 /*----------
@@ -223,7 +233,15 @@ menu
     display: block;
 }
 
-
+.menu-img{
+  display: block;
+  img {
+  display: block;
+  width: 100%;
+  height: auto;
+ 
+}
+}
 
 
 .card-body{
@@ -239,7 +257,13 @@ menu
     font-weight: 400;    
     justify-content: center;
     
+  
+    
 }
+.menu-span {
+    display: inline-block; 
+    
+  }
 .text{
     font-size:1.5rem;    
     line-height: calc(25/15);
@@ -278,7 +302,7 @@ about
     }
 }
 .about__contents{
-    flex-grow: 1;
+    flex: 1;
     margin-top: 18px;
     @include sp{
         width: 100%;
@@ -324,51 +348,42 @@ display: none;
 
 
 .more__btn {
- display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  background-color: #505050;
-  font-size: 2.5rem;
-  font-weight: 200;
+
   width: 250px;
   height: 55px;   
   margin-top: 21px;
-  cursor: pointer;
-  transition: all 0.3s;
-    text-align: center;
-   
-   
-  &:hover{
-    color: #505050;
-    background-color: #fff;
-    border: 1px solid #505050;
-   
-   
+  cursor: pointer; 
+    
+ @include sp{
+   max-width: 315px;  
+  margin-inline: auto;       
   }
+    
   a{
-     color: #fff;    
-    display: block;
-     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s ease-in-out;
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      text-align: center;   
+      background-color: #505050;
+      font-size: 2.5rem;
+      font-weight: 200;
+      color: #fff; 
+      height: 55px;
+      width: 100%;   
+      border: 1px solid #505050;
+      transition: 0.3s ease-in-out;
+    
     &:hover{
-        color: #505050;
+        color: #505050;       
+        background-color: #fff;
+  
+   
     }
      
-   }
-  @include sp{
-    display: block;
-    margin: 22px auto 0 auto;
-    width: 315px;
-    
-  }
-  @media screen and (max-width:375px){
-    width: 250px;
-  }
-}
+   } }
+  
+  
+
 
 /*----------
 footer
@@ -379,6 +394,10 @@ footer{
   text-align: center;
   padding-top: 30px;
   padding-bottom: 29px;
+  @media screen and (max-width:374px){
+    padding-top: 20px;
+  padding-bottom: 19px;
+  }
 }
 small{
     font-size: 2rem;
@@ -388,4 +407,11 @@ small{
         font-size: 1.7rem;
         
     }
+    
+}
+.footer-br{
+  @media screen and (min-width:375px){
+    display: none;
+  
+  }
 }
