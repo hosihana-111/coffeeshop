@@ -231,6 +231,9 @@ menu
     width: 31.25%; // 300px ÷ 960px
     text-align: center;
     display: block;
+    @include sp {
+    width: 100%;
+  }
 }
 
 .menu-img{
@@ -348,40 +351,64 @@ display: none;
 
 
 .more__btn {
-
-  max-width: 250px;
-  height: 55px;   
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  height: 55px;
   margin-top: 21px;
-  cursor: pointer; 
-    
- @include sp{
-   
-   max-width: 315px;  
-  margin-inline: auto;       
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #fff;
+  background-color: #505050;
+  border: 1px solid #505050;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: #505050;
+    background-color: #fff;
   }
-    
-  a{
-      display: flex; 
-      justify-content: center; 
-      align-items: center; 
-      text-align: center;   
-      background-color: #505050;
-      font-size: 2.5rem;
-      font-weight: 200;
-      color: #fff; 
-      height: 55px;
-      width: 100%;   
-      border: 1px solid #505050;
-      transition: 0.3s ease-in-out;
-    
-    &:hover{
-        color: #505050;       
-        background-color: #fff;
-  
-   
-    }
+
+  @include sp {
+    max-width: 315px;
+    width: 100%;
+    margin: 21px auto 0 auto;
+  }
+}
      
-   } }
+    
+// a{
+  
+//   display: inline-flex;             
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+
+//   width: 250px;
+//   height: 55px;
+//   font-size: 2.5rem;
+//   font-weight: 200;
+//   color: #fff;
+//   background-color: #505050;
+//   border: 1px solid #505050;
+//   text-decoration: none;
+//   cursor: pointer;
+//   transition: all 0.3s ease-in-out;
+
+//   &:hover {
+//     color: #505050;
+//     background-color: #fff;
+//   }
+
+//   @include sp {
+//     width: 315px;
+//     margin: 21px auto 0;
+//   }
+// }
+
   
   
 
@@ -395,10 +422,7 @@ footer{
   text-align: center;
   padding-top: 30px;
   padding-bottom: 29px;
-  @media screen and (max-width:374px){
-    padding-top: 20px;
-  padding-bottom: 19px;
-  }
+  
 }
 small{
     font-size: 2rem;
@@ -409,10 +433,4 @@ small{
         
     }
     
-}
-.footer-br{
-  @media screen and (min-width:375px){
-    display: none;
-  
-  }
 }

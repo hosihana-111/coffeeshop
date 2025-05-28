@@ -630,6 +630,11 @@ menu
   text-align: center;
   display: block;
 }
+@media only screen and (max-width: 767px) {
+  .menu_card {
+    width: 100%;
+  }
+}
 
 .menu-img {
   display: block;
@@ -773,18 +778,6 @@ about
 }
 
 .more__btn {
-  max-width: 250px;
-  height: 55px;
-  margin-top: 21px;
-  cursor: pointer;
-}
-@media only screen and (max-width: 767px) {
-  .more__btn {
-    max-width: 315px;
-    margin-inline: auto;
-  }
-}
-.more__btn a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -795,19 +788,29 @@ about
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background-color: #505050;
+  width: 250px;
+  height: 55px;
+  margin-top: 21px;
   font-size: 2.5rem;
   font-weight: 200;
   color: #fff;
-  height: 55px;
-  width: 100%;
+  background-color: #505050;
   border: 1px solid #505050;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.more__btn a:hover {
+.more__btn:hover {
   color: #505050;
   background-color: #fff;
+}
+@media only screen and (max-width: 767px) {
+  .more__btn {
+    max-width: 315px;
+    width: 100%;
+    margin: 21px auto 0 auto;
+  }
 }
 
 /*----------
@@ -820,12 +823,6 @@ footer {
   padding-top: 30px;
   padding-bottom: 29px;
 }
-@media screen and (max-width: 374px) {
-  footer {
-    padding-top: 20px;
-    padding-bottom: 19px;
-  }
-}
 
 small {
   font-size: 2rem;
@@ -834,11 +831,5 @@ small {
 @media only screen and (max-width: 767px) {
   small {
     font-size: 1.7rem;
-  }
-}
-
-@media screen and (min-width: 375px) {
-  .footer-br {
-    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
