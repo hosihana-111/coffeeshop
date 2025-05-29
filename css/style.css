@@ -795,7 +795,7 @@ about
   font-weight: 300;
   color: #fff;
   background-color: #505050;
-  border: 1px solid #505050;
+  border: 1px solid #000;
   text-decoration: none;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
