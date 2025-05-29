@@ -571,7 +571,7 @@ fv
     line-height: 1.2;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
   .fv__contents {
     font-size: 30px;
   }
@@ -792,7 +792,7 @@ about
   height: 55px;
   margin-top: 21px;
   font-size: 2.5rem;
-  font-weight: 200;
+  font-weight: 300;
   color: #fff;
   background-color: #505050;
   border: 1px solid #505050;
